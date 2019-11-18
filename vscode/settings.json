@@ -1,0 +1,125 @@
+{
+  "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+  "workbench.colorTheme": "Ayu Dark Bordered",
+
+  "editor.fontFamily": "Myrica M, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "[python]":{
+    "editor.tabSize": 4,
+  },
+  "editor.insertSpaces": true,
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
+  "editor.snippetSuggestions": "top",
+  
+  "C_Cpp.clang_format_style": "Chromium",
+
+  /********************************************************************************
+  個人の環境による。使用しているターミナルのパスを設定。
+  C:/WINDOWS/system32/cmd.exe                                 //コマンドプロンプト
+  C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe   //PowerShell(64bit)
+  C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell.exe   //PowerShell(32bit)
+  C:/Windows/System32/wsl.exe                                 //WSL
+  ********************************************************************************/
+  "terminal.integrated.shell.windows": "",
+  /*******************************************************************************/
+
+  "terminal.integrated.fontSize": 16,
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.openExplorerOnEnd": true,
+
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
+ 
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  /***************************************
+  remote-ssh拡張を入れている人のみ。
+  configfileのパスを入力
+  ***************************************/
+  "remote.SSH.configFile": "",
+  /*************************************/ 
+
+
+  /*************************************
+  以下vscode.vimの設定 
+  *************************************/
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindings":[
+    {
+      "before":["<C-j>"],
+      "after":["<C-d>"]
+    },
+    {
+      "before":["<C-k>"],
+      "after":["<C-u>"]
+    },
+    {
+      "before":["<C-l>"],
+      "after":["$"]
+    },
+    {
+      "before":["<C-h>"],
+      "after":["^"]
+    },
+    {
+      "before":["<CR>"],
+      "after":["a", "<CR>", "<Esc>"]
+    },
+    {
+      "before":["H"],
+      "after":["g", "T"]
+    },
+    {
+      "before":["L"],
+      "after":["g", "t"]
+    },
+    {
+      "before":["j"],
+      "after":["g", "j"]
+    },
+    {
+      "before":["k"],
+      "after":["g", "k"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before":["j","j"],
+      "after":["<Esc>"]
+    },
+    {
+      "before":["<C-l>"],
+      "after":["<Right>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before":["<C-l>"],
+      "after":["$"]
+    },
+    {
+      "before":["<C-h>"],
+      "after":["^"]
+    },
+    {
+      "before":["<C-j>"],
+      "after":["<C-d>"]
+    },
+    {
+      "before":["<C-k>"],
+      "after":["<C-u>"]
+    },
+  ],
+}

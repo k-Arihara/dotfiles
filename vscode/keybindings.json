@@ -1,0 +1,102 @@
+[
+  //基本設定
+  {
+    "key": "ctrl+a",
+    "command": "editor.action.selectAll",
+    "when": "editorTextFocus && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "editorTextFocus && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "editorTextFocus && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "editorTextFocus && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus && !inDebugRepl"
+  },
+  {
+    "key":"ctrl+l",
+    "command":"cursorRight",
+    "when":"editorTextFocus && !editorReadOnly && vim.mode == 'Insert'"
+  },
+
+  //Suggestionの移動
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+
+  //コマンドパレット上での移動
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+
+  //テキストの小文字化
+  {
+    "key": "shift+alt+l",
+    "command": "editor.action.transformToLowercase"
+  },
+
+  //テキストの大文字化
+  {
+    "key": "shift+alt+u",
+    "command": "editor.action.transformToUppercase"
+  },
+
+  //C-;やC--を間違えて押すことがあるため除外。
+  {
+    "key": "ctrl+oem_minus",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "ctrl+oem_plus",
+    "command": "-workbench.action.zoomIn"
+  },
+
+  //tmuxでprefixキーとして使うため除外。
+  {
+    "key": "ctrl+f",
+    "command": "-workbench.action.terminal.focusFindWidget",
+    "when": "terminalFocus"
+  },
+
+  //terminal内のvimでC-jを使うため除外。
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+
+  //terminal内で次のterminalに移行
+  {
+    "key" : "ctrl+shift+j", "command":"workbench.action.terminal.focusNext"
+  },
+  
+  //terminal内で前のterminalに移行
+  {
+    "key" : "ctrl+shift+k", "command":"workbench.action.terminal.focusPrevious"
+  },
+]

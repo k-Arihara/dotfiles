@@ -58,22 +58,6 @@
   "vim.useCtrlKeys": true,
   "vim.normalModeKeyBindings":[
     {
-      "before":["<C-j>"],
-      "after":["<C-d>"]
-    },
-    {
-      "before":["<C-k>"],
-      "after":["<C-u>"]
-    },
-    {
-      "before":["<C-l>"],
-      "after":["$"]
-    },
-    {
-      "before":["<C-h>"],
-      "after":["^"]
-    },
-    {
       "before":["<CR>"],
       "after":["a", "<CR>", "<Esc>"]
     },
@@ -103,23 +87,5 @@
       "before":["<C-l>"],
       "after":["<Right>"]
     }
-  ],
-  "vim.visualModeKeyBindings": [
-    {
-      "before":["<C-l>"],
-      "after":["$"]
-    },
-    {
-      "before":["<C-h>"],
-      "after":["^"]
-    },
-    {
-      "before":["<C-j>"],
-      "after":["<C-d>"]
-    },
-    {
-      "before":["<C-k>"],
-      "after":["<C-u>"]
-    },
   ],
 }

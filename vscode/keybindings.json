@@ -99,4 +99,14 @@
   {
     "key" : "ctrl+shift+k", "command":"workbench.action.terminal.focusPrevious"
   },
+
+  //ctrl+pをvimで使うため、ctrl+shift+pに変更
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.quickOpen"
+  },
 ]

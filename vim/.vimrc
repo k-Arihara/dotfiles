@@ -43,7 +43,6 @@ endif
 " ------------------
 
 
-
 " ----------------------
 " 基本的な設定
 " ----------------------
@@ -139,15 +138,6 @@ inoremap <C-l> <Right>
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
-" 括弧・クォーテーション補完
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap (<Enter> ()<Left><CR><Esc><S-o><Tab>
-inoremap {<Enter> {}<Left><CR><Esc><S-o><Tab>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
 " 新規ウィンドウ
 noremap <C-n> :<C-u>vsplit<CR>
 " ウィンドウ移動
@@ -193,3 +183,4 @@ let g:neocomplete#enable_auto_delimiter = 1
 " 1文字目の入力から補完のポップアップを表示
 let g:neocomplete#auto_completion_start_length = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+

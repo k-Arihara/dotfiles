@@ -1,4 +1,4 @@
-" ------------------
+"-------------------
 " dein.vim設定
 " ------------------
 " プラグインが実際にインストールされるディレクトリ
@@ -59,14 +59,15 @@ set vb t_vb=
 " 入力中のコマンドをステータスに表示する
 set showcmd
 "backspace有効化
-" indent : 行頭の空白
-" eol    : 改行
-" start  : 挿入モード開始位置より手前の文字
-set backspace=indent,eol,start
+"indent : 行頭の空白
+"eol    : 改行
+"start  : 挿入モード開始位置より手前の文字
+set backspace=start,indent,eol
 " 改行コードを自動認識
 set fileformats=unix,dos,mac
 " クリップボード使用可
 set clipboard=unnamed,autoselect
+
 
 " ---------------------
 " バックアップ関係
@@ -75,6 +76,7 @@ set clipboard=unnamed,autoselect
 set nobackup
 " スワップファイルを作らない
 set noswapfile
+
 
 " ---------------------
 " 見た目系
@@ -111,6 +113,7 @@ set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
 
+
 " -------------------------
 " 検索系
 " -------------------------
@@ -126,6 +129,7 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 
 " ------------------------
 " キーマッピング
@@ -150,6 +154,7 @@ inoremap <C-?> <Right><C-h>
 nnoremap <F5> :<C-u>.tabedit$MYVIMRC<CR>
 " NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+inoremap <C-u> <Left><Del>
 
 " -----------------------
 " その他
@@ -168,7 +173,7 @@ endif
 " コマンドモードでエイリアスを有効化
 let $BASH_ENV = "~/.bash/.bash_aliases"
 
-" neocomplete.vim
+
 "-------------------------------
 " neocomplete, neosnippetの設定
 "-------------------------------
@@ -182,5 +187,24 @@ let g:neocomplete#min_keyword_length = 1
 let g:neocomplete#enable_auto_delimiter = 1
 " 1文字目の入力から補完のポップアップを表示
 let g:neocomplete#auto_completion_start_length = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" TABで補完を決定
+inoremap <expr><TAB> pumvisible() ? "\<SPACE>\<C-h>" : "\<TAB_>"
+"--------------------------------
+"neocomplete, neosnippet設定終了
+"--------------------------------
+
+
+"-------------------------------
+"syntastic の設定
+"-------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"-------------------------------
+"syntastic の設定終了
+"-------------------------------
 

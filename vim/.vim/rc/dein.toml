@@ -26,3 +26,6 @@ repo = 'scrooloose/syntastic'
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+

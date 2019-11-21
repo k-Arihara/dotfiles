@@ -151,10 +151,10 @@ noremap H <C-w>h
 nnoremap <CR> A<CR><Esc>
 " deleteキー有効化
 inoremap <C-?> <Right><C-h>
+" F5で.vimrcを瞬時に開く
 nnoremap <F5> :<C-u>.tabedit$MYVIMRC<CR>
 " NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-inoremap <C-u> <Left><Del>
 
 " -----------------------
 " その他
@@ -171,7 +171,7 @@ if has('vim_starting')
   let &t_SR .= "\e[3 q"
 endif
 " コマンドモードでエイリアスを有効化
-let $BASH_ENV = "~/.bash/.bash_aliases"
+let $BASH_ENV = "~/.zsh.d/alias.zsh"
 
 
 "-------------------------------

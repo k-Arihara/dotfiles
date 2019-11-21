@@ -95,5 +95,5 @@ export GPG_TTY=`tty`
 [[ $- != *i* ]] && return
 [[ -z "$TMUX"  ]] && exec tmux
 
-bash_conf=~/.bash/
+bash_conf=~/.bash.d/
 . $bash_conf/.bash_aliases

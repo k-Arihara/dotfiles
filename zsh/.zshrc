@@ -36,7 +36,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-ZSHHOME="${HOME}/.zsh"
+ZSHHOME="${HOME}/.zsh.d"
 
 if [ -d $ZSHHOME -a -r $ZSHHOME -a -x $ZSHHOME ]; then
   for i in $ZSHHOME/*; do

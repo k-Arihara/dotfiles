@@ -10,6 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+
 # Customize to your needs...
 #if not running interactively, do not do anything
 [[ $- != *i* ]] && return
@@ -26,3 +27,9 @@ cdls()
 alias cd="cdls"
 
 PURE_PROMPT_SYMBOL='>'
+
+#GnuPG2
+pgrep -q gpg-agent || eval $(gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
+[ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
+export GPG_AGENT_INFO
+export GPG_TTY=`tty`

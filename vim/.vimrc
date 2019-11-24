@@ -155,6 +155,10 @@ inoremap <C-?> <Right><C-h>
 nnoremap <F5> :<C-u>.tabedit$MYVIMRC<CR>
 " NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" tmux上ではbackspaceの制御コードが^?となるため
+if $TMUX != ""
+  inoremap <C-?> <BS>
+endif
 
 " -----------------------
 " その他
@@ -170,8 +174,6 @@ if has('vim_starting')
   " 置換モード時に非点の下線タイプのカーソル
   let &t_SR .= "\e[3 q"
 endif
-" コマンドモードでエイリアスを有効化
-let $BASH_ENV = "~/.zsh.d/alias.zsh"
 
 
 "-------------------------------

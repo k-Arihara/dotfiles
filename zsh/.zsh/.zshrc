@@ -1,8 +1,7 @@
 # Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
+fpath+=("$HOME/.zsh/pure")
+autoload -Uz promptinit; promptinit
+prompt pure
 
 setopt histignorealldups sharehistory
 
@@ -51,5 +50,21 @@ export GPG_AGENT_INFO
 export GPG_TTY=`tty`
 
 # if not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ -z "$TMUX"  ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX"  ]] && exec tmux
+
+
+alias boot-code-noauth='~/code-server/code-server --allow-http --no-auth'
+alias boot-code='~/code-server/code-server --allow-http'
+alias pushd='pushd ./'
+
+alias -g ls='ls --color=auto'
+alias la='ls -la --color=auto'
+
+cdls()
+{
+  \cd "$@" && ls -la
+}
+alias cd="cdls"
+
+PURE_PROMPT_SYMBOL='>'

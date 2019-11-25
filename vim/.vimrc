@@ -160,6 +160,7 @@ if $TMUX != ""
   inoremap <C-?> <BS>
 endif
 
+
 " -----------------------
 " その他
 " -----------------------
@@ -190,7 +191,7 @@ let g:neocomplete#enable_auto_delimiter = 1
 " 1文字目の入力から補完のポップアップを表示
 let g:neocomplete#auto_completion_start_length = 1
 " TABで補完を決定
-inoremap <expr><TAB> pumvisible() ? "\<SPACE>\<C-h>" : "\<TAB_>"
+inoremap <expr><TAB> pumvisible() ? "\<SPACE>\<C-h>" : "\<TAB>"
 "--------------------------------
 "neocomplete, neosnippet設定終了
 "--------------------------------

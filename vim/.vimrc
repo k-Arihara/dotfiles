@@ -38,6 +38,9 @@ endif
 if dein#check_install()
 	call dein#install()
 endif
+
+" プラグイン削除コマンド:  :call dein#recache_runtimepath()
+call map(dein#check_clean(), "delete(v:val, 'rf')")
 " ------------------
 " dein.vim設定終了
 " ------------------
@@ -93,10 +96,6 @@ set title
 set ruler
 " 行番号を表示
 set number
-" インデントはスマートインデント
-set smartindent
-" 括弧入力時の対応する括弧を表示
-set showmatch
 " ステータスラインを常に表示
 set laststatus=2
 " コマンドラインの補完
@@ -112,6 +111,8 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+" 前行のインデントを引き継ぐautoindentを有効化
+set autoindent
 
 
 " -------------------------
@@ -129,6 +130,13 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+
+" -----------------------
+" レジスタ系
+" -----------------------
+nnoremap x "_x
+nnoremap s "_s
 
 
 " ------------------------
@@ -149,8 +157,6 @@ noremap L <C-w>l
 noremap H <C-w>h
 " ノーマルモードで改行
 nnoremap <CR> A<CR><Esc>
-" deleteキー有効化
-inoremap <C-?> <Right><C-h>
 " F5で.vimrcを瞬時に開く
 nnoremap <F5> :<C-u>.tabedit$MYVIMRC<CR>
 " NERDTree
@@ -158,7 +164,15 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " tmux上ではbackspaceの制御コードが^?となるため
 if $TMUX != ""
   inoremap <C-?> <BS>
+elseif
+" deleteキー有効化
+  inoremap <C-?> <Right><C-h>
 endif
+" 括弧自動補完
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap {<CR> {}<Left><CR><CR><Up><Tab>
 
 
 " -----------------------
@@ -210,4 +224,3 @@ let g:syntastic_check_on_wq = 0
 "-------------------------------
 "syntastic の設定終了
 "-------------------------------
-

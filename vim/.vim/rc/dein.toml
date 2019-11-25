@@ -21,11 +21,6 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'Shougo/neocomplete.vim'
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
-
-[[plugins]]
-repo = 'Townk/vim-autoclose'
-
-[[plugins]]
 repo = 'vim-syntastic/syntastic'
+
 

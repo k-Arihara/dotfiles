@@ -164,7 +164,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " tmux上ではbackspaceの制御コードが^?となるため
 if $TMUX != ""
   inoremap <C-?> <BS>
-elseif
+else
 " deleteキー有効化
   inoremap <C-?> <Right><C-h>
 endif

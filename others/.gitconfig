@@ -1,7 +1,7 @@
 [user]
 	name = doRA9876
 	email = dev9876dora@gmail.com
-	signingKey = EB6E7052B5C51284
+	signingKey = 
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 [color]

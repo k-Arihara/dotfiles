@@ -27,4 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # linux brew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# capslock -> ctrl
+setxkbmap -option ctrl:nocaps

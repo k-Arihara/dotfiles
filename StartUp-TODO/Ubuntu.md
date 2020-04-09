@@ -2,8 +2,8 @@
 
 ## Change Caps-Lock to Ctrl
 1. Install "dconf-editor".
-2. Go to "/org/gnome/desktop/input-sources/xkb-options".
-3. Input "['ctrl:nocaps']" in "Custom value".
+2. Go to `/org/gnome/desktop/input-sources/xkb-options`.
+3. Input `['ctrl:nocaps']` in "Custom value".
 
 ## Time gap in dual boot environment
 ```
@@ -11,7 +11,7 @@ $ sudo timedatectl set-local-rtc true
 ```
 
 ## Setting Fonts
-1. Install Fonts and Copy to "/usr/share/fonts/truetype".
+1. Install Fonts and Copy to `/usr/share/fonts/truetype`.
 2. Run the following command to update the fonts list.  
 ```
 $ fc-cache -fv
@@ -42,7 +42,7 @@ ssb rsa4096/*** 20XX-XX-XX [E]
 ```
 
 ### Register your key ID in Git
-4. Edit .gitconfig as follows.
+4. Edit `.gitconfig` as follows.
 ```
 [user]
   signingKey = <your key ID>
@@ -56,6 +56,6 @@ ssb rsa4096/*** 20XX-XX-XX [E]
 ```
 $ gpg --armor --export <your key ID> > public.key
 ```
-6. Open the file you just output, and copy from "---BEGIN PGP PUBLIC KEY BLOCK---" to "END PGP PUBLIC KEY BLOCK---".
-7. You access to your GitHub page, and go to Settings->SSH and GPG keys->New GPG key.
+6. Open the file you just output, and copy from `---BEGIN PGP PUBLIC KEY BLOCK---` to `END PGP PUBLIC KEY BLOCK---`.
+7. You access to your GitHub page, and go to `Settings -> SSH and GPG keys -> New GPG key`.
 8. Paste the public key you copied eariler.

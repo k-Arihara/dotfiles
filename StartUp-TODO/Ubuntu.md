@@ -56,6 +56,6 @@ ssb rsa4096/*** 20XX-XX-XX [E]
 ```
 $ gpg --armor --export <your key ID> > public.key
 ```
-6. Open the file you just output, and copy from `---BEGIN PGP PUBLIC KEY BLOCK---` to `END PGP PUBLIC KEY BLOCK---`.
+6. Open the file you just output, and copy from `---BEGIN PGP PUBLIC KEY BLOCK---` to `---END PGP PUBLIC KEY BLOCK---`.
 7. You access to your GitHub page, and go to `Settings -> SSH and GPG keys -> New GPG key`.
 8. Paste the public key you copied eariler.

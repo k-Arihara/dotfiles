@@ -22,7 +22,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-alias la='ls -la'
+alias la='ls -la --tyme-style long-iso'
 
 
 cdls()

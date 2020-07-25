@@ -66,3 +66,8 @@ $ gpg --armor --export <your key ID> > public.key
 ```
 <layout>default</layout>  ->  <layout>jp</layout>
 ```
+
+## Change Media directory name to English
+```
+$ LANG=C xdg-user-dirs-gtk-update
+```

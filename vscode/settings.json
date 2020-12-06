@@ -1,6 +1,9 @@
 {
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.colorCustomizations": {
+    "terminal.ansiGreen": "#a5008f",
+  },
 
   "editor.fontFamily": "Myrica M, 'Courier New', monospace",
   "editor.fontSize": 16,

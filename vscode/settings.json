@@ -91,4 +91,28 @@
       "after":["<Right>"]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before":["x"],
+      "after":["\"", "_", "x"]
+    },
+    {
+      "before":["s"],
+      "after":["\"", "_", "s"]
+    },
+    {
+      "before":["c"],
+      "after":["\"", "_", "c"]
+    },
+    {
+      "before":["d"],
+      "after":["\"", "_", "d"]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before":["p"],
+      "after":["\"", "_", "d", "P"]
+    },
+  ],
 }

@@ -137,7 +137,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " -----------------------
 nnoremap x "_x
 nnoremap s "_s
-nnoremap d "_d
+nnoremap dd "_dd
+nnoremap dD dd
 nnoremap c "_c
 vnoremap p "_dP
 

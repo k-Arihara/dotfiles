@@ -80,10 +80,10 @@
   //tmuxでprefixキーとして使うため除外。
   {
     "key": "ctrl+f",
-    "command": "-workbench.action.terminal.focusFindWidget",
-    "when": "terminalFocus"
+    "command": "-workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
   },
-
+  
   //terminal内のvimでC-jを使うため除外。
   {
     "key": "ctrl+j",
@@ -108,5 +108,17 @@
   {
     "key": "ctrl+shift+p",
     "command": "workbench.action.quickOpen"
+  },
+  
+  //ctrl+@でターミナルをスイッチ
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+[BracketLeft]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   },
 ]

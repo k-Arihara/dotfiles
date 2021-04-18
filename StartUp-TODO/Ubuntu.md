@@ -1,7 +1,7 @@
 # Ubuntu TODO List
 
 ## Change Caps-Lock to Ctrl
-1. Install "dconf-editor".
+1. Install "dconf-editor" from terminal.
 2. Go to `/org/gnome/desktop/input-sources/xkb-options`.
 3. Input `['ctrl:nocaps']` in "Custom value".
 
@@ -61,8 +61,10 @@ $ gpg --armor --export <your key ID> > public.key
 8. Paste the public key you copied eariler.
 
 ## Problem changing to UK keyboard layout at login
-1. Move to `/usr/share/ibus/component/`
-2. Edit mozc.xml as follows using your favorite editor.
+1. Install "ibus-mozc" from terminal and reboot.
+2. Change input source "mozc" from Settings -> Region & Language -> Input Sources.
+3. Move to `/usr/share/ibus/component/`
+4. Edit mozc.xml as follows using your favorite editor.
 ```
 <layout>default</layout>  ->  <layout>jp</layout>
 ```

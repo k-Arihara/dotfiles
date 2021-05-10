@@ -105,8 +105,12 @@
       "after":["\"", "_", "c"]
     },
     {
-      "before":["d"],
-      "after":["\"", "_", "d"]
+      "before":["d", "d"],
+      "after":["\"", "_", "d", "d"]
+    },
+    {
+      "before":["d", "D"],
+      "after":["d", "d"]
     },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [

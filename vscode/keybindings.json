@@ -121,4 +121,10 @@
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
+  
+  //誤爆を抑制
+  {
+    "key": "ctrl+,",
+    "command": "-workbench.action.openSettings"
+  },
 ]

@@ -26,7 +26,24 @@
   C:/Windows/SysWOW64/WindowsPowerShell/v1.0/powershell.exe   //PowerShell(32bit)
   C:/Windows/System32/wsl.exe                                 //WSL
   ********************************************************************************/
-  "terminal.integrated.shell.windows": "",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
   /*******************************************************************************/
 
   "terminal.integrated.fontSize": 16,

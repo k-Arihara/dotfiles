@@ -86,10 +86,10 @@ if ! shopt -oq posix; then
 fi
 
 # GnuPG2
-pgrep -q gpg-agent || eval $(gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
-[ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
-export GPG_AGENT_INFO
-export GPG_TTY=`tty`
+#pgrep -q gpg-agent || eval $(gpg-agent --daemon --write-env-file ${HOME}/.gpg-agent-info)
+#[ -f ${HOME}/.gpg-agent-info ] && source ${HOME}/.gpg-agent-info
+#export GPG_AGENT_INFO
+#export GPG_TTY=`tty`
 
 # if not running interactively, do not do anything
 #[[ $- != *i* ]] && return

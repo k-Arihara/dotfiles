@@ -1,14 +1,9 @@
 [user]
 	name = k-Arihara
 	email = dev9876dora@gmail.com
-	signingKey = 
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 [color]
 	diff = auto
 	status = auto
 	branch = auto
-[gpg]
-	program = /usr/bin/gpg
-[commit]
-	gpgSign = true

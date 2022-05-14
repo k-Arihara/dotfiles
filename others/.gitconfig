@@ -7,3 +7,10 @@
 	diff = auto
 	status = auto
 	branch = auto
+
+[commit]
+	gpgsign = false
+
+[diff]
+	colorMoved = dimmed-zebra
+	algorithm = histogram

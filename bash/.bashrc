@@ -95,5 +95,7 @@ fi
 #[[ $- != *i* ]] && return
 #[[ -z "$TMUX"  ]] && exec tmux
 
+stty erase '^?'
+
 bash_conf=~/.bash/
 . $bash_conf/.bash_aliases

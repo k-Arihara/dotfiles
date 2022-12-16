@@ -85,12 +85,15 @@ shopt -s checkwinsize
 # enable to use alias in Shell Script.
 shopt -s expand_aliases
 
-# change directory when only directory name is enterd 
-shopt -s autocd
-
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 shopt -s globstar
+
+shopt -s cdable_vars
+shopt -s autocd
+shopt -s checkhash
+shopt -s dotglob
+shopt -s execfail
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

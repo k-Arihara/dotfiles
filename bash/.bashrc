@@ -53,13 +53,22 @@ esac
 #########################
 # stty
 #########################
+
 stty erase '^?'
 
 
 #########################
-# ENV VAR
+# prompt var
 #########################
-SHELL=/bin/bash
+
+# \[\e[1;32m\]\A \u\[\e[m\]@\[\e[1;34m\]\w\[\e[m\]\[\e[1;33m\] \\$\[\e[m\]
+export PS1="\[\e[1;32m\]\A \u\[\e[m\]:\[\e[1;34m\]\w\[\e[m\]\[\e[1;33m\]\\$\[\e[m\] "
+
+
+#########################
+# shell var
+#########################
+
 EDITOR=/usr/bin/vim
 
 # don't put duplicate lines or lines starting with space in the history.

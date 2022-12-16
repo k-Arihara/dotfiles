@@ -25,10 +25,3 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-# linux brew
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-# CUDA path
-#export PATH="/usr/local/cuda-10.2/bin:$PATH"
-#LD_LIBRARY_PATH='/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}'

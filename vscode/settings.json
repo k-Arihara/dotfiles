@@ -82,11 +82,11 @@
       "after":["a", "<CR>", "<Esc>"]
     },
     {
-      "before":["H"],
+      "before":["T"],
       "after":["g", "T"]
     },
     {
-      "before":["L"],
+      "before":["t"],
       "after":["g", "t"]
     },
     {

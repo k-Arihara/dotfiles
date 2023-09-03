@@ -110,6 +110,10 @@ noremap L <C-w>l
 noremap H <C-w>h
 " ノーマルモードで改行
 nnoremap <CR> A<CR><Esc>
+" 改行を2回連続で実行したときにautoindentが削除されないようにする
+nnoremap o oX<C-h>
+nnoremap O OX<C-h>
+inoremap <CR> <CR>X<C-h>
 " F5で.vimrcを瞬時に開く
 nnoremap <F5> :<C-u>.tabedit$MYVIMRC<CR>
 " NERDTree
@@ -122,8 +126,14 @@ endif
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
-inoremap {<CR> {}<Left><CR><CR><Up><Tab>
-
+function! AddIndentWhenEnter()
+  if getline(".")[col(".")-1] == "}" && getline(".")[col(".")-2] == "{"
+    return "\nX\<C-h>\n\<Up>\<Tab>"
+  else
+    return "\n"
+  endif
+endfunction
+inoremap <silent> <expr> <CR> AddIndentWhenEnter()
 
 " -----------------------
 " その他

@@ -38,8 +38,6 @@ set noswapfile
 "----------------------
 " シンタックスハイライトを有効化
 syntax on
-" colorschemeを変更
-colorscheme molokai
 let g:rehash256 = 1
 set background=dark
 " タイトルをウィンドウ枠に表示する

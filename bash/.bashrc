@@ -123,6 +123,7 @@ fi
 # general
 alias pushd='pushd ./'
 alias la='ls -la --time-style long-iso'
+alias ll='ls -l'
 
 # run 'ls' command when changing directories
 cdls()
